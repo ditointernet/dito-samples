@@ -1,131 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Landing page da Dito</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="https://blog.dito.com.br/wp-content/uploads/2018/09/cropped-favicon_dito-32x32.png"/>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet"/>
-<!-- Efeito de "incorreto" do form -->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!-- Google fonts -->
-
- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">			
- <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet">
-</head>
-<body style="background-color: #999999;"> 
-	<!-- INÍCIO JavaScript Dito -->
-	<script>
-			(function(d,e,id){
-				window.dito={};window._ditoTemp=[];
-				dito.generateID=function(str){return'_dito_sha1_'+str;}
-				var m=['init','identify','alias','unalias','track'],s=d.createElement('script'),
-				x=d.getElementsByTagName(e)[0];s.type='text/javascript';s.async=true;s.id=id;
-				s.src='http://storage.googleapis.com/dito/sdk.js';x.parentNode.insertBefore(s,x);
-				for(var i=0;i<m.length;i++){dito[m[i]]=function(i){
-				return function(){_ditoTemp.push({methodName:m[i],params:arguments});}}(i)}
-			})(document,'script','dito-jssdk');
-	
-			dito.init({
-				apiKey: '	MjAxNC0wNS0yMCAxMTowMzoyMSAtMDMwMEdyYXBoIEFwaSBWMjQ0'
-			});
-		</script>
-	 <!-- FIM JavaScript Dito -->
-	 <!-- INÍCIO Formatação CPF -->
-	<script>
-			function formatar(mascara, documento){
-				var i = documento.value.length;
-				var saida = mascara.substring(0,1);
-				var texto = mascara.substring(i)
-				if (texto.substring(0,1) != saida){
-									documento.value += texto.substring(0,1);
-				}
-			}
-	</script>
-	 <!-- FIM formatação CPF -->
-
-		<div class="limiter" style="background-image: url('https://blog.dito.com.br/wp-content/uploads/2018/11/download-bg.png');">
-			<div class="container-login100"> 
-				<div class="login100-more" style="background-image: url('https://blog.dito.com.br/wp-content/uploads/2018/11/download-bg.png');"> 
-						<div class='conteudoheader' style="background-image: url('https://blog.dito.com.br/wp-content/uploads/2018/11/download-bg.png');"> 
-							<img class='imglogoheader' src='https://blog.dito.com.br/wp-content/uploads/2018/11/logo-dito-1.png'/>
-							<h1 class='txtheader'> 
-								Quer vender mais <br>
-						  	para a sua base <br>
-								de clientes? <br> 
-							</h1>
-								<p class='pheader'> Através da nossa tecnologia, <br>
-								 empoderamos o varejo <br>
-								 a conhecer e se relacionar com sua base <br> 
-								 de forma personalizada e escalável. 
-								</p> 
-						</div>
-				</div>
-
-			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50" >
-				<form class="login100-form validate-form">
-					
-					<span class="login100-form-title p-b-59">
-						Faça o download <br> grátis
-					</span>
-
-					<div class="wrap-input100 validate-input" data-validate="Por favor, digite seu nome.">
-						<span class="label-input100">Nome</span>
-						<input class="input100" type="text" name="name" placeholder="">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Insira um endereço de e-mail válido: ex@abc.xyz.">
-						<span class="label-input100">E-mail</span>
-						<input class="input100" type="text" name="email" placeholder="">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Insira um endereço residencial válido.">
-							<span class="label-input100">Cidade</span>
-							<input class="input100" type="text" name="cidade" placeholder="">
-							<span class="focus-input100"></span>
-						</div>
-					
-					<div class="wrap-input100 validate-input" data-validate="Insira um CPF válido. Ex: 123.456.789-10.">
-						<span class="label-input100">CPF</span>
-						<input class="input100" type="text" name="cpf"  minlength='14' maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" placeholder="" required>
-						<span class="focus-input100"></span>
-					</div>
-					<div class="wrap-input100 validate-input" data-validate="Por favor, digite o nome de sua profissão.">
-							<span class="label-input100">Cargo</span>
-							<input class="input100" type="text" name="cargo" placeholder="" minlength="6" maxlength="25">
-							<span class="focus-input100"></span>
-						</div>
-						
-						<div class="generoform">
-									<fieldset class="generoform" data-role="controlgroup">
-										<legend class="generoform" >Escolha o seu gênero:</legend>
-											<input class= "input-radio100" type="radio" name="gender" id="female" value="Feminino"> 
-												<label class='label-radio100' for="female">Feminino</label>
-											<input class= "input-radio100" type="radio" name="gender" id="male" value="Masculino">
-												<label class='label-radio100' for="male">Masculino</label>
-											<input class= "input-radio100" type="radio" name="gender" id="other" value="Outro">
-												<label class='label-radio100' for="other">Outro</label>
-									</fieldset> 
-								
-						</div> <br>
-						
-						<button type='submit' class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30" id='botao'>
+  <head>
+    <title>Landing page da Dito</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="https://blog.dito.com.br/wp-content/uploads/2018/09/cropped-favicon_dito-32x32.png"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet"/>
+    <!-- Efeito de "incorreto" do form -->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet">
+  </head>
+  <body style="background-color: #999999;">
+    <!-- INÍCIO JavaScript Dito -->
+    <script>
+      (function(d,e,id){
+      	window.dito={};window._ditoTemp=[];
+      	dito.generateID=function(str){return'_dito_sha1_'+str;}
+      	var m=['init','identify','alias','unalias','track'],s=d.createElement('script'),
+      	x=d.getElementsByTagName(e)[0];s.type='text/javascript';s.async=true;s.id=id;
+      	s.src='http://storage.googleapis.com/dito/sdk.js';x.parentNode.insertBefore(s,x);
+      	for(var i=0;i<m.length;i++){dito[m[i]]=function(i){
+      	return function(){_ditoTemp.push({methodName:m[i],params:arguments});}}(i)}
+      })(document,'script','dito-jssdk');
+      
+      dito.init({
+				apiKey: 'MjAxNC0wNS0yMCAxMTowMzoyMSAtMDMwMEdyYXBoIEFwaSBWMjQ0',
+				domain: 'dito.com.br'
+      });
+    </script>
+    <!-- FIM JavaScript Dito -->
+    <!-- INÍCIO Formatação CPF -->
+    <script>
+      function formatar(mascara, documento) {
+      	var i = documento.value.length;
+      	var saida = mascara.substring(0,1);
+      	var texto = mascara.substring(i)
+      	if (texto.substring(0,1) != saida) {
+      		documento.value += texto.substring(0,1);
+      	}
+      }
+    </script>
+    <!-- FIM formatação CPF -->
+    <div class="limiter" style="background-image: url('https://blog.dito.com.br/wp-content/uploads/2018/11/download-bg.png');">
+      <div class="container-login100">
+        <div class="login100-more" style="background-image: url('https://blog.dito.com.br/wp-content/uploads/2018/11/download-bg.png');">
+          <div class='conteudoheader' style="background-image: url('https://blog.dito.com.br/wp-content/uploads/2018/11/download-bg.png');">
+            <img class='imglogoheader' src='https://blog.dito.com.br/wp-content/uploads/2018/11/logo-dito-1.png'/>
+            <h1 class='txtheader'> 
+              Quer vender mais <br>
+              para a sua base <br>
+              de clientes? <br> 
+            </h1>
+            <p class='pheader'> Através da nossa tecnologia, <br>
+              empoderamos o varejo <br>
+              a conhecer e se relacionar com sua base <br> 
+              de forma personalizada e escalável. 
+            </p>
+          </div>
+        </div>
+        <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50" >
+          <form class="login100-form validate-form">
+            <span class="login100-form-title p-b-59">
+            	Faça seu cadastro!
+            </span>
+            <div class="wrap-input100 validate-input" data-validate="Por favor, digite seu nome.">
+              <span class="label-input100">Nome</span>
+              <input class="input100" type="text" name="name" placeholder="">
+              <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate = "Insira um endereço de e-mail válido: ex@abc.xyz.">
+              <span class="label-input100">E-mail</span>
+              <input class="input100" type="text" name="email" placeholder="">
+              <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate = "Insira um endereço residencial válido.">
+              <span class="label-input100">Cidade</span>
+              <input class="input100" type="text" name="cidade" placeholder="">
+              <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate="Insira um CPF válido. Ex: 123.456.789-10.">
+              <span class="label-input100">CPF</span>
+              <input class="input100" type="text" name="cpf"  minlength='14' maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" placeholder="" required>
+              <span class="focus-input100"></span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate="Por favor, digite o nome de sua profissão.">
+              <span class="label-input100">Cargo</span>
+              <input class="input100" type="text" name="cargo" placeholder="" minlength="6" maxlength="25">
+              <span class="focus-input100"></span>
+            </div>
+            <div class="generoform">
+              <fieldset class="generoform" data-role="controlgroup">
+                <legend class="generoform" >Escolha o seu gênero:</legend>
+                <input class= "input-radio100" type="radio" name="gender" id="female" value="Feminino"> 
+                <label class='label-radio100' for="female">Feminino</label>
+                <input class= "input-radio100" type="radio" name="gender" id="male" value="Masculino">
+                <label class='label-radio100' for="male">Masculino</label>
+                <input class= "input-radio100" type="radio" name="gender" id="other" value="Outro">
+                <label class='label-radio100' for="other">Outro</label>
+              </fieldset>
+            </div>
+            <br>
+            <button type='submit' class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30" id='botao'>
 							Enviar
-						<i class="fa fa-long-arrow-right m-l-5"></i> </button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-	<script src="js/main.js"></script>
-	<script src='js/tracking.js'></script>
-</body>
+							<i class="fa fa-long-arrow-right m-l-5"></i>
+						</button>
+        	</form>
+      	</div>
+    	</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src='js/tracking.js'></script>
+  </body>
 </html>
