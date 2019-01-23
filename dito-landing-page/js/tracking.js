@@ -24,7 +24,7 @@
       }
     });
 
-    // Envio de envento (OPCIONAL)
+    // Envio de evento (OPCIONAL)
     dito.track({
       action: 'cadastrou-landing-page',
       data: {

@@ -97,7 +97,9 @@ textarea:-ms-input-placeholder {color: #cccccc;}
 button {
 	outline: none !important;
 	border: none;
-	background: transparent;
+  background: transparent;
+  padding-left: 4px;
+  padding-top: 7px;
 }
 
 button:hover {
