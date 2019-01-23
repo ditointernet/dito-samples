@@ -5,14 +5,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="https://blog.dito.com.br/wp-content/uploads/2018/09/cropped-favicon_dito-32x32.png"/>
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet"/>
 <!-- Efeito de "incorreto" do form -->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!-- Google fonts -->
+
  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">			
  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet">
 </head>
@@ -122,59 +122,10 @@
 			</div>
 		</div>
 	</div>
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="vendor/select2/select2.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
 	<script src='js/tracking.js'></script>
-
-<!--
-	 <script>
-	 $('#botao').on('click', function (event) { 
-		var data = document.getElementsByTagName('input');
-			var object = {};
-			for (var i = 0; i < data.length; i++) {
-				if(data[i].value == '' || data[i].value == null){
-					alert('Preencha todos os campos')
-					return false;
-				}
-				object[data[i].name] = data[i].value;
-				var genderValue = $("input[name='gender']:checked").val();
-  
-			}
-	
-			var teste = {
-			
-			id: dito.generateID(object.email),
-			name: object.name,
-			email: object.email,
-			location: object.cidade,
-			gender: genderValue,
-				data: {
-					cpf: object.cpf,
-					cargo: object.cargo
-				}
-		}
-		console.log(teste);
-		console.log(object);
-*/ -->
-		<!--/*
-		dito.identify({
-			
-			id: dito.generateID(object.email),
-			name: object.nome,
-			email: object.email,
-			location: object.cidade,
-			gender: object.gender.value,
-				data: {
-					cpf: object.cpf,
-					cargo: object.cargo
-				}
-		});
-	*/
-		event.preventDefault();
-	
-	}); 
-</script> -->
 </body>
 </html>
