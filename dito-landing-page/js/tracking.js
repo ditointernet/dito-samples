@@ -5,25 +5,23 @@
     if (genderValue == null) {
       alert('Selecione seu gênero.')
     };
-      var object = {};
-      for (var i = 0; i < data.length; i++) {
-        object[data[i].name] = data[i].value;
-      }
-      //var genderValue = $("input[name='gender']:checked").val();
+      var dadosFormulario = {};
+        for (var i = 0; i < data.length; i++) {
+        dadosFormulario[data[i].name] = data[i].value;
+        }
+      
       dito.identify({
-        id: dito.generateID(object.email),
-        name: object.name,
-        email: object.email,
-        location: object.cidade,
+        id: dito.generateID(dadosFormulario.email),
+        name: dadosFormulario.name,
+        email: dadosFormulario.email,
+        location: dadosFormulario.cidade,
         gender: genderValue,
         data: {
-          cpf: object.cpf,
-          cargo: object.cargo
+          cpf: dadosFormulario.cpf,
+          cargo: dadosFormulario.cargo
         }
       });
       
     event.preventDefault();
-    console.log(object)
-    console.log(dito.identify())
   }); 
 })(jQuery);
