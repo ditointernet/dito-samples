@@ -7,6 +7,13 @@
       alert('Selecione seu gênero.')
     };
     var dadosFormulario = {};
+    var email = $("input[name='email']").val();
+    var name = $("input[name='name']").val();
+    var cidade = $("input[name='cidade']").val();
+    var cpf = $("input[name='cpf']").val();
+    var cargo = $("input[name='cargo']").val();
+    
+    $("input[name='email']").val();
     for (var i = 0; i < data.length; i++) {
       dadosFormulario[data[i].name] = data[i].value;
     }
