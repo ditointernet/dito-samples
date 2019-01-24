@@ -33,6 +33,7 @@
     });
 
     console.log(dadosFormulario);
+    alert("Formulário enviado com sucesso!");
     event.preventDefault();
   }); 
 })(jQuery);
