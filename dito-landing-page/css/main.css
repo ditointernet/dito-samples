@@ -340,7 +340,6 @@ input[type="radio"]{
 .input-radio100 {
   display: none;
   margin: 0 10px 0 10px;
-  touch-action: manipulation;
 }
 
 .label-radio100 {
